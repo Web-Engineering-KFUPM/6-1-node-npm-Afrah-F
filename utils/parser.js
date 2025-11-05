@@ -1,10 +1,13 @@
+
 import _ from "lodash";
 
 export function parseNumbers(input) {
-  return {/*write code here*/}
+
+    const mapped = _.map(input, (str) => Number(str));
+    return _.filter(mapped, (n) => !Number.isNaN(n));
 }
 
 export function isValidOperation(operation) {
-  return {/*write code here*/}
+    const validOps = ["add", "subtract", "multiply", "divide"];
+    return _.includes(validOps, operation);
 }
-
